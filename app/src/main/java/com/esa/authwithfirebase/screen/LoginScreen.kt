@@ -70,6 +70,7 @@ fun LoginScreen(
             }
         )
         Button(
+            enabled = authState.value != AuthState.Loading,
             onClick = {
                 authViewModel.login(email = email, password = password)
             }
